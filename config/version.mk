@@ -33,6 +33,9 @@ endif
 ifeq ($(COLT_BUILDTYPE), OFFICIAL)
     COLT_VERSION := ColtOS-$(COLT_TAG)-$(VERSION)_$(COLT_BUILDTYPE)-$(shell date -u +%Y%m%d)-$(COLT_BUILD)
 
+PRODUCT_PACKAGES += \
+    Updater
+
 else ifeq ($(COLT_BUILDTYPE), EXPERIMENTAL)
     COLT_VERSION := ColtOS-$(COLT_TAG)-$(VERSION)_$(COLT_BUILDTYPE)-$(shell date -u +%Y%m%d)-$(COLT_BUILD) 
 
